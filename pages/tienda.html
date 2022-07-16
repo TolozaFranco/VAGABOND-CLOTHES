@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAGABOND TIENDA</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="icon" href="../images/logo.png">
+</head>
+
+<body>
+    <div id="gridtienda">
+    <!--------------------------------------HEADER-------------------------------------->
+    <header>
+    
+        <div class="titulo">
+            <a href="../index.html"><img src="../images/logo.png" alt="" class="src"></a>
+
+        </div>
+        <!-----------Menu de navegacion---------------->
+        <nav class="navegador">
+            <h1>VAGABOND</h1>
+            <H2>BORN TO RIDE</H2>
+            <ul class="menusuperior">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda </a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>    
+    </header>
+    <!------------------------------------Principal------------------------------------->
+    
+    <main class="maintienda">       
+            <!-----------titulo e imagen------------->
+     <div>
+        <h1 class="titulotienda">Tienda</h1>
+    </div>   
+         <div>   
+            <H4>Campera Cuero</H4>
+            <img src="../images/camperamujer.png" alt="camperacuerofem" width="250">
+            <!-----------menu desplegable para completar formulario de talle------------->
+            <label for="talle">Talle</label>
+            <select name="talle" id="talle">
+                <option value="">Seleccione su talle</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <input class="botontienda" type="submit">
+        </div>   
+            <!-----------titulo e imagen------------->
+        <div>
+            <h4>Buso Blanco</h4>
+            <img src="../images/busoblanco.png" alt="busoblanco" width="250" >
+            <!-----------menu desplegable para completar formulario de talle------------->
+            <label for="talle">Talle</label>
+            <select name="talle" id="talle">
+                <option value="">Seleccione su talle</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <input class="botontienda" type="submit">
+        </div>    
+       </main>
+
+    <aside class="sectortalles">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat atque vitae quod error animi molestias dignissimos impedit aliquam dolores quia?</p>
+        <img src="../images/TABLATALLES.jpg" alt="tabla de talles">
+    </aside>
+
+<!--------------------------------------Footer-------------------------------------->
+    <footer>
+        <p> Hecho por Franco Toloza</p>
+        <p> ubicamos en Buenos Aires, CABA!</p>
+        <!-----------GMAPS Iframe------------>
+        <iframe class="MAPA"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.3980396354!2d-58.57372448094736!3d-34.61546073548015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1654956604970!5m2!1ses!2sar"
+            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+</div>
+</body>
+
+</html>
