@@ -242,6 +242,9 @@ footer {
     color: #060c42;
 }
 
+
+/*------------------------MEDIA QUERIES----------------------------*/
+
 @media (max-width:480px){
     #contenedorgrid{
         display: block;
@@ -296,3 +299,5 @@ footer {
                 height: auto;
             }
     }
+
+

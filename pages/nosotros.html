@@ -6,41 +6,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VAGABOND NOSOTROS</title>
-    <link rel="stylesheet" href="../estilos.css">
-    <link rel="icon" href="../images/logo.png">
+    <!-------CSS BOOSTRAP only-------->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-------CSS PROPIO------->
+<link rel="stylesheet" href="../estilobootstrap.css">
+<link rel="icon" href="../images/logo.png">
 </head>
 
 <body>
-    <!--------------------------------------Header-------------------------------------->
-    <header>
-    
-        <div class="titulo">
-            <a href="../index.html"><img src="../images/logo.png" alt="" class="src"></a>
-
-        </div>
-        <!-----------Menu de navegacion---------------->
-        <nav class="navegador">
-            <h1>VAGABOND</h1>
-            <H2>BORN TO RIDE</H2>
-            <ul class="menusuperior">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tienda.html">Tienda </a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+<div>
+<!--------------------------------------HEADER-------------------------------------->
+<header>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../images/logo.png" alt="" width="40" height="34" class="d-inline-block align-text-top">
+  VAGABOND CLOTHES
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/tienda.html">Tienda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/galeria.html">Galeria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+              </li>                          
             </ul>
+          </div>
+        </div>
+      </nav>
 
-        </nav>
-    </header>
+
+</header>
     <!-------------------------------------Principal------------------------------------->
-    <div class="container">
       <main>
-        <div>
-            <!--------------Video Presentacion----------------->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZOZOqbK86t0"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+       <section class="container-fluid">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../images/moteros.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../images/garagemotoinicio.jpg" class="d-block w-100" alt="...">
+              </div>
+             
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+          
                 <!--------------Texto Presentacion----------------->
             <h1>Sobre nosotros</h1>
             <p>Bienvenidos a Vagabond, Este proyecto nace de un grupo de amigos amantes de
@@ -51,18 +84,41 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptas
                 unde quos tempora nobis aspernatur molestias est perspiciatis dicta officiis
                 et ullam cumque rem, itaque quaerat enim id pariatur? Vel.</p>
-        </div>
+       
       </main>
-    </div>
+   
     <!--------------------------------------Footer-------------------------------------->
     <footer>
-        <p> Hecho por Franco Toloza</p>
-        <p> ubicamos en Buenos Aires, CABA!</p>
-        <iframe class="MAPA"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.3980396354!2d-58.57372448094736!3d-34.61546073548015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1654956604970!5m2!1ses!2sar"
-            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="container-fluid">
+            <div class="row p-5">
+
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h3">VAGABOND</p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h5">Ubicacion</p>
+                    <a class="text-secondary text-decoration-none" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.3980396354!2d-58.57372448094736!3d-34.61546073548015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1654956604970!5m2!1ses!2sar">CABA</a>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h5">Contacto</p>
+                    <a class="text-secondary text-decoration-none" href="www.instagram.com">Instagram</a>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h5">Terms & Conditions</p>
+                    <a class="text-secondary text-decoration-none" href="#">Privacy Policy</a>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    
     </footer>
+</div>
+<!------------ JavaScript Bundle with Popper ------------>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 
 </html>
