@@ -275,7 +275,7 @@ header, footer{
 
 /*----------------MEDIA QUERIES------------------*/
 @media screen and (max-width:480px) {
-    /************HEADER***********/
+    /**********HEADER***********/
     header {
         flex-direction: column;
         width: 100%;
