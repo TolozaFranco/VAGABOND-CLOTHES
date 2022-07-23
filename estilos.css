@@ -425,20 +425,34 @@ header, footer{
     }
 }
 
-@media(min-width:769px) and(max-width:980px) {
+@media(min-width:769px) and (max-width:980px) {
+    /************HEADER***********/
+    .titulo img{
+        max-width: 150px;
+    }
     /************TIENDA***********/
     #gridtienda{
         display: block;
     }
 
     .maintienda{
+        
         display: block;
-        width: 100vh
+       
+        
     }
     .sectortalles{
+        position: 0px;
         display:block ;
-        margin: 0%;
+        margin: 20px;
     }
-    
+    .tallesimg {
+        object-fit: cover;
+        }
+
+    footer{
+        display: block;
+    }    
 }
 
+     
