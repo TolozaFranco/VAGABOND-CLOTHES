@@ -22,7 +22,7 @@ header {
 
 nav {
     padding: 20px;
-    width: 70%;
+    width: 100%;
     line-height: 3em;
 
 
@@ -125,13 +125,13 @@ footer {
     margin: 20px;
     justify-content: center;
     align-items: center;
-     
+
 
 }
- 
-.contenedorgaleria p{
+
+.contenedorgaleria p {
     padding: 0px 0px 10px;
-} 
+}
 
 .galeria {
     display: grid;
@@ -238,61 +238,207 @@ footer {
     padding: 20px;
 }
 
+.sectortalles img {
+    width: auto;
+}
+
 .botontienda {
     color: #060c42;
 }
 
-@media (max-width:480px){
-    #contenedorgrid{
-        display: block;
-        }
-        .rellenoindex{
-            background-color: #1f2552;
-            padding: 20px;
-        }
-        .rellenoindex img{
-            width: 300px;
-            height: auto;
-        }
-        .navegador .menusuperior{
-            font-size: 10px;
-        }
-        nav h1{
-            font-size: 30px;
-        }
-        nav h2{
-            font-size: 25px;
-        }
-        footer{
-            width: 100%;
-        }
-    #gridtienda{
-        display: block;
-     }
-    .maintienda{
-        display: block;
-    }
-    .sectortalles{
-        justify-content: center;
-        margin-left: 25%;
-    }
+/*----------------ANIMACIONES, TRANSICIONES Y GRADIENTES------------------*/
+
+/************GRADIENTES***********/
+
+header, footer{
+    background-image: linear-gradient(135deg,rgb(63, 21, 161),rgb(23, 55, 122),rgb(14, 14, 131), rgb(89, 16, 138));
+    animation:fanimado 10s infinite;
+    background-size: 500%;
+}
+/************ANIMACIONES***********/
+@keyframes fanimado{
+    0%{
+        background-position: 0% 50%;
     }
 
-    @media(min-width:480px) and (max-width:980px){
-        #gridtienda{
-            display:block
-        }
-        .maintienda{
-            display: block;
-        }
-        footer{
-            width: 100%;
-        }
-        #contenedorgrid{
-            display: block;
-            }
-            .rellenoindex img{
-                width: 470px;
-                height: auto;
-            }
+    50%{
+        background-position:100% 50%;
     }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+/************TRANSICIONES***********/
+.menusuperior a:hover{
+    background-color: steelblue;
+}
+
+/*----------------MEDIA QUERIES------------------*/
+@media screen and (max-width:480px) {
+    /************HEADER***********/
+    header {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        display: inline-block
+    }
+
+    .titulo {
+        display: none;
+    }
+
+    .navegador {
+
+        flex-direction: column;
+        line-height: normal;
+        ;
+
+    }
+
+    .menusuperior li {
+
+        display: flex;
+
+    }
+
+    .menusuperior a {
+        border-style: solid;
+        width: 100%;
+    }
+
+    .navegador .menusuperior {
+        font-size: 10px;
+    }
+
+    nav h1 {
+        font-size: 30px;
+    }
+
+    nav h2 {
+        font-size: 25px;
+    }
+
+/************INDEX***********/
+    #contenedorgrid {
+        display: block;
+    }
+
+    .rellenoindex {
+        background-color: #1f2552;
+        padding: 20px;
+    }
+
+    .rellenoindex img {
+        width: 100%;
+        height: auto;
+    }
+
+    .novedades img {
+        width: 100%;
+
+    }
+
+    /************TIENDA***********/
+
+    #gridtienda {
+            display: block;
+    }
+    
+    .maintienda {
+            display: block;
+    }
+    
+     .sectortalles {
+            justify-content: center;
+            margin-left: 25%;
+    }
+    /************FOOTER***********/
+
+    footer {
+        width: 100%;
+    }
+
+    footer .MAPA {
+        width: 100%;
+    }
+
+}
+
+@media(min-width:481px) and (max-width:768px) {
+
+    /************HEADER***********/
+
+    header {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        display: inline-block
+    }
+
+    .titulo {
+        display: none;
+    }
+
+    .navegador {
+
+        flex-direction: column;
+        line-height: normal;
+
+
+    }
+
+    .menusuperior li {
+
+        display: flex;
+
+    }
+
+    .menusuperior a {
+        border-style: solid;
+        width: 100%;
+    }
+
+    /************INDEX***********/
+    #contenedorgrid{
+        display: block;
+    }
+    
+    .rellenoindex img {
+        width: 100%;
+        height: auto;
+    }
+
+    /************TIENDA***********/
+
+    #gridtienda {
+        display: block
+    }
+
+
+    .maintienda {
+        display: block;
+    }
+
+    /************FOOTER***********/
+    footer {
+        width: 100%;
+    }
+}
+
+@media(min-width:769px) and(max-width:980px) {
+    /************TIENDA***********/
+    #gridtienda{
+        display: block;
+    }
+
+    .maintienda{
+        display: block;
+        width: 100vh
+    }
+    .sectortalles{
+        display:block ;
+        margin: 0%;
+    }
+    
+}
+
