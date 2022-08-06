@@ -1,9 +1,17 @@
+@import "colores";
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/*BODY*/
+body {
+    font-family: 'Arial Narrow';
+    margin: 0%;
+    max-width: 100%;
+    flex-direction: column;
+    display: flex;
+}
 /*HEADER*/
 header {
     grid-area: header;
@@ -13,44 +21,42 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 25vh
-}
-
-
-.titulo {
-    align-items: left;
-}
-
-nav {
-    padding: 20px;
-    width: 100%;
-    line-height: 3em;
-
 
 }
 
-nav h1 {
-    font-size: 50px;
+.header{
+    &_tittle{
+        align-items: left;
+    }
+    &_nav {
+        padding: 20px;
+        width: 100%;
+        line-height: 3em;
+        h1 {
+            font-size: $font-title;
+        }
+    
+    }
 }
 
 .menusuperior {
     list-style-type: none;
-}
 
+    li {
+        text-align: center;
+        display: inline-block;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: #0e2383;
+            border-style: solid;
+            border-color: #5a18a5;
+            color: white;
+            padding: 1rem;
+        }
+    
+    }
 
-.menusuperior li {
-    text-align: center;
-    display: inline-block;
-
-}
-
-.menusuperior a {
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: #060c42;
-    border-style: solid;
-    border-color: #060b33;
-    color: white;
-    padding: 1rem;
 }
 
 /*INDEX GRID*/
@@ -71,25 +77,23 @@ nav h1 {
     margin: 20px;
     justify-content: center;
     align-items: center;
+    h2{
+        font-size: $font-secundarytittle;
+        color: $color-tittle;
 
+    }
+    p{
+        color: $color-secundary;
+    }
+    
 }
 
 /*NOVEDADES INDEX*/
 .novedades {
     grid-area: novedades;
-
     border-style: solid;
     margin: 20px 20px 20px;
     padding: 20px 20px 20px 20px;
-}
-
-/*BODY*/
-body {
-    font-family: 'Arial Narrow';
-    margin: 0%;
-    max-width: 100%;
-    flex-direction: column;
-    display: flex;
 }
 
 /*FOOTER*/
@@ -101,149 +105,12 @@ footer {
     padding: 20px;
     display: inline-block;
 }
-
-.mapa {
-    position: absolute;
-    right: 30px;
-
-}
-
-/*GALERIA GRID*/
-
-#gridgaleria {
-    display: grid;
-    grid-template-areas:
-        "header header header"
-        "galeria galeria galeria"
-        "footer footer footer"
-    ;
-
-}
-
-.contenedorgaleria {
-    grid-area: galeria;
-    margin: 20px;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.contenedorgaleria p {
-    padding: 0px 0px 10px;
-}
-
-.galeria {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 1rem;
-
-}
-
-.galeria div img {
-    width: auto;
-    height: 300px;
-
-}
-
-
-/*FORMULARIO*/
-.form-register {
-    width: 400px;
-    background: #24303c;
-    padding: 30px;
-    margin: 20px;
-    margin-top: 100px;
-    border-radius: 4px;
-    color: white;
-    box-shadow: 7px 13px 37px #000;
-}
-
-.form-register h4 {
-    font-size: 22px;
-    margin-bottom: 20px;
-
-
-}
-
-.controls {
-    width: 100%;
-    background: #24303c;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-size: 18px;
-}
-
-.form-register p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-}
-
-.form-register a {
-    color: white;
-    text-decoration: none;
-
-}
-
-.form-register a:hover {
-    color: white;
-    text-decoration: underline;
-
-}
-
-.form-register .bottoms {
-    width: 100%;
-    background: #1f53c5;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-}
-
-
-
-/*grid tienda*/
-#gridtienda {
-    display: grid;
-    grid-template-areas:
-        "header header header  header"
-        "maintienda maintienda maintienda  sectortalles"
-        "footer footer footer footer";
-    grid-row: 1fr 1fr 1fr 1fr;
-
-}
-
-.maintienda {
-    grid-area: maintienda;
-    margin: 20px;
-    display: table-column-group;
-}
-
-.maintienda .titulotienda {
-    padding: 20px 0;
-
-
-}
-
-.sectortalles {
-    grid-area: sectortalles;
-    border-style: solid;
-    margin: 20% 20% 20% 40%;
-    background-color: rgb(255, 255, 188);
-    padding: 20px;
-}
-
-.sectortalles img {
-    width: auto;
-}
-
-.botontienda {
-    color: #060c42;
+.footer{
+    map{
+        position: absolute;
+        right: 30px;
+    
+    }
 }
 
 /*----------------ANIMACIONES, TRANSICIONES Y GRADIENTES------------------*/
@@ -282,41 +149,41 @@ header, footer{
         height: auto;
         display: inline-block
     }
+    .header{
+        &_tittle{
+            display: none;
+            position: absolute;
+            right: 30px;       
+        }
+        &__nav {
 
-    .titulo {
-        display: none;
+            flex-direction: column;
+            line-height: normal;    
+        }
     }
+    
+    .header_nav{
+        .menusuperior {
+            font-size: 10px;
+            li {
 
-    .navegador {
+                display: flex;
+        
+            } 
+            a {
+                border-style: solid;
+                width: 100%;
+            }
+        }
+        &_nav h1 {
+            font-size: 30px;
+        }
+    
+        &_nav h2 {
+            font-size: 25px;
+        }
+    } 
 
-        flex-direction: column;
-        line-height: normal;
-        ;
-
-    }
-
-    .menusuperior li {
-
-        display: flex;
-
-    }
-
-    .menusuperior a {
-        border-style: solid;
-        width: 100%;
-    }
-
-    .navegador .menusuperior {
-        font-size: 10px;
-    }
-
-    nav h1 {
-        font-size: 30px;
-    }
-
-    nav h2 {
-        font-size: 25px;
-    }
 
 /************INDEX***********/
     #contenedorgrid {
@@ -326,42 +193,26 @@ header, footer{
     .rellenoindex {
         background-color: #1f2552;
         padding: 20px;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
-
-    .rellenoindex img {
-        width: 100%;
-        height: auto;
+    .novedades{
+        img{
+            width: 100%;
+        }
     }
-
-    .novedades img {
-        width: 100%;
-
-    }
-
-    /************TIENDA***********/
-
-    #gridtienda {
-            display: block;
-    }
-    
-    .maintienda {
-            display: block;
-    }
-    
-     .sectortalles {
-            justify-content: center;
-            margin-left: 25%;
-    }
+  
     /************FOOTER***********/
 
-    footer {
+    .footer {
         width: 100%;
-    }
 
-    footer .MAPA {
-        width: 100%;
+        map {
+            width: 100%;
+        }
     }
-
 }
 
 @media(min-width:481px) and (max-width:768px) {
@@ -374,29 +225,31 @@ header, footer{
         height: auto;
         display: inline-block
     }
-
-    .titulo {
-        display: none;
+    
+    .header{
+        &_tittle{
+            display: none;
+        }
+        &_nav{       
+                flex-direction: column;
+                line-height: normal;           
+        }
     }
 
-    .navegador {
+    .menusuperior{
+        li {
 
-        flex-direction: column;
-        line-height: normal;
-
+            display: flex;
+    
+        }
+        a {
+            border-style: solid;
+            width: 100%;
+        }
 
     }
 
-    .menusuperior li {
 
-        display: flex;
-
-    }
-
-    .menusuperior a {
-        border-style: solid;
-        width: 100%;
-    }
 
     /************INDEX***********/
     #contenedorgrid{
@@ -408,17 +261,6 @@ header, footer{
         height: auto;
     }
 
-    /************TIENDA***********/
-
-    #gridtienda {
-        display: block
-    }
-
-
-    .maintienda {
-        display: block;
-    }
-
     /************FOOTER***********/
     footer {
         width: 100%;
@@ -427,29 +269,14 @@ header, footer{
 
 @media(min-width:769px) and (max-width:980px) {
     /************HEADER***********/
-    .titulo img{
-        max-width: 150px;
-    }
-    /************TIENDA***********/
-    #gridtienda{
-        display: block;
-    }
-
-    .maintienda{
-        
-        display: block;
-       
-        
-    }
-    .sectortalles{
-        position: 0px;
-        display:block ;
-        margin: 20px;
-    }
-    .tallesimg {
-        object-fit: cover;
+    .header{
+        &_tittle{
+            img{
+            max-width: 150px;
         }
-
+       }    
+    }
+    
     footer{
         display: block;
     }    
