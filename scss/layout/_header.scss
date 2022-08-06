@@ -1,0 +1,46 @@
+/*---------HEADER-------*/
+header {
+    grid-area: header;
+    background-color: #060c42;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25vh
+
+}
+
+.header{
+    &_tittle{
+        align-items: left;
+    }
+    &_nav {
+        padding: 20px;
+        width: 100%;
+        line-height: 3em;
+        h1 {
+            font-size: $font-title;
+        }
+    
+    }
+}
+
+.menusuperior {
+    list-style-type: none;
+
+    li {
+        text-align: center;
+        display: inline-block;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: #0e2383;
+            border-style: solid;
+            border-color: #5a18a5;
+            color: white;
+            padding: 1rem;
+        }
+    
+    }
+
+}
